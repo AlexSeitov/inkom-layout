@@ -1,0 +1,43 @@
+.h1,
+.h2,
+.h3 {
+  margin: 0;
+  font-weight: 900;
+  font-family: $fontFamily, sans-serif;
+}
+
+.h1 {
+  margin-bottom: rem(50);
+  font-size: rem(24);
+
+  @media (min-width: $md) {
+    font-size: rem(36);
+  }
+
+  @media (min-width: $lg) {
+    margin-bottom: rem(82);
+  }
+}
+
+.h2 {
+  margin-bottom: rem(30);
+  font-size: rem(22);
+
+  @media (min-width: $md) {
+    font-size: rem(30);
+  }
+
+  @media (min-width: $xl) {
+    margin-bottom: rem(40);
+  }
+}
+
+.h3 {
+  margin-bottom: rem(26);
+  font-size: rem(18);
+
+  @media (min-width: $xl) {
+    margin-bottom: rem(36);
+    font-size: rem(24);
+  }
+}

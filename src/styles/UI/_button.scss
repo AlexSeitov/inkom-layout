@@ -1,0 +1,43 @@
+.btn {
+  display: inline-block;
+  padding: rem(16) rem(20);
+  color: $white;
+  font-weight: 700;
+  font-size: rem(14);
+  font-family: $secondaryFontFamily;
+  line-height: lh(18.4);
+  text-align: center;
+  text-decoration: none;
+  background-color: $primaryColor;
+  border: none;
+  border-radius: $btnRadius;
+  transition: all $transition;
+
+  @media (min-width: $xl) {
+    padding: rem(18) rem(40);
+    font-size: rem(16);
+  }
+
+  @media (hover: hover) {
+    cursor: pointer;
+
+    &:hover {
+      color: $white;
+      background-color: $btnColorHover;
+      outline-color: $btnColorHover;
+    }
+  }
+
+  &-secondary {
+    color: $primaryColor;
+    font-size: rem(14);
+    background-color: transparent;
+    border-radius: $btnRadius;
+    outline: rem(2) solid $primaryColor;
+  }
+
+  // @media (min-width: $md) {
+  //   display: inline-block;
+  //   padding: rem(17) rem(26);
+  // }
+}

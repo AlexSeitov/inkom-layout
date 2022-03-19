@@ -1,0 +1,78 @@
+.swiper-catalog {
+  position: relative;
+  margin: 0 auto;
+  overflow-x: hidden;
+
+  @media (min-width: $xl) {
+    width: calc(100% - rem(120));
+  }
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  text-align: center;
+  cursor: grabbing;
+}
+
+// container for navigation
+.swiper-btns {
+  display: none;
+
+  @media (min-width: $xl) {
+    position: absolute;
+    top: 45%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - rem(60));
+    opacity: 0.3;
+  }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: rem(16);
+  height: rem(16);
+  cursor: pointer;
+
+  &::after {
+    display: inline-block;
+    padding: rem(16);
+    border: solid $primaryColor;
+    border-width: 0 rem(10) rem(10) 0;
+    transition: transform $transition;
+    content: '';
+  }
+}
+
+.swiper-button-prev {
+  &::after {
+    transform: rotate(135deg);
+  }
+
+  @media (hover: hover) {
+    &:hover::after {
+      transform: rotate(135deg) scale(1.4);
+    }
+  }
+}
+
+.swiper-button-next {
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  @media (hover: hover) {
+    &:hover::after {
+      transform: rotate(-45deg) scale(1.4);
+    }
+  }
+}
+
+.swiper-catalog-btns {
+  padding: rem(2);
+}

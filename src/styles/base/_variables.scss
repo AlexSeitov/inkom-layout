@@ -1,0 +1,51 @@
+// Fonts, text
+$fontFamily: 'Museo Sans Cyrl', sans-serif;
+$secondaryFontFamily: 'Robotto', sans-serif;
+$fontSize: rem(18);
+$fontWeight: 500;
+$lineHeight: 1.4;
+
+// Colors
+$primaryColor: #926a25;
+$primaryColorLight: #cfa55b;
+$black: #424242;
+$white: #fff;
+$gray: #5a5a5a;
+$btnColorHover: #b38e4f;
+$overlayColor: rgba(#312002, 70%);
+$placeHolderColor: #787878;
+
+// Others
+$radius: rem(10);
+$btnRadius: rem(5);
+$shadow: 0 0 60px rgba(255, 194, 86, 50%);
+$transition: 0.3s;
+
+// Sizes
+$minWidth: 320;
+$maxWidth: 1920;
+$maxWidthContainer: 1320; // container size
+$containerPadding: 30;
+
+// Container width
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$sm: rem(568);
+$md: rem(768);
+$lg: rem(1024);
+$xl: rem($maxWidthContainer);
+
+// Columns
+// $col-1: calc(100% / 12 * 1);
+// $col-2: calc(100% / 12 * 2);
+// $col-3: calc(100% / 12 * 3);
+// $col-4: calc(100% / 12 * 4);
+// $col-5: calc(100% / 12 * 5);
+// $col-6: 50%;
+// $col-7: calc(100% / 12 * 7);
+// $col-8: calc(100% / 12 * 8);
+// $col-9: calc(100% / 12 * 9);
+// $col-10: calc(100% / 12 * 10);
+// $col-11: calc(100% / 12 * 11);
+// $col-12: 100%;

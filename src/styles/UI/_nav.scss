@@ -1,0 +1,45 @@
+.header {
+  &__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding-top: rem(120);
+    color: $white;
+    font-size: rem(18);
+    background-color: #000;
+    transform: translateX(200%);
+    transition: transform $transition;
+
+    @media (min-width: $md) {
+      top: rem(120);
+      width: 50%;
+      padding-top: rem(20);
+      font-size: rem(20);
+      border: 1px solid $white;
+      border-right: none;
+      border-top-left-radius: rem(8);
+    }
+
+    &.nav_active {
+      transform: translateX(0);
+    }
+
+    .nav__item {
+      padding: rem(20) rem(20);
+    }
+
+    .nav__link {
+      display: block;
+    }
+  }
+}
+
+.nav {
+}
+
+.nav_active {
+}
