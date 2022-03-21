@@ -27,7 +27,8 @@ const swiperCatalog = new Swiper('.swiper-catalog', {
   spaceBetween: 20,
   centeredSlides: true,
   autoplay: {
-    delay: 2000
+    delay: 2000,
+    disableOnInteraction: false
   },
   speed: 600,
   loop: true,
