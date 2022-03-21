@@ -83,6 +83,7 @@ export const styles = () => {
     .pipe(sass().on('error', sass.logError))
     .pipe(gcmq())
     .pipe(autoprefixer())
+    .pipe(replace(/\.jpg/g, '.webp'))
     .pipe(gulpif(isBuild, cleanCSS()))
     .pipe(rename('style.min.css'))
     .pipe(gulpif(isDev, sourcemaps.write('.')))

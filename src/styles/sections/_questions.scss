@@ -1,7 +1,10 @@
 .questions {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../images/questions/questions-bg-sm.jpg');
+
+  @media (min-width: $md) {
+    background-image: url('../images/questions/questions-bg.jpg');
+  }
 
   .container {
     position: relative;

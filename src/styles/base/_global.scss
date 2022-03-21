@@ -35,10 +35,10 @@ li {
 }
 
 img {
+  display: block;
   width: 100%;
   height: auto;
   font-size: 0;
-  vertical-align: middle;
 }
 
 .container {
@@ -83,4 +83,10 @@ img {
 .location-icon {
   width: rem(40);
   height: rem(40);
+}
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

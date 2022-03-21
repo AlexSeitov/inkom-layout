@@ -2,6 +2,11 @@
   position: relative;
   padding-bottom: rem(80);
   color: $white;
+  background-image: url('../images/main-block/main-block-bg-sm.jpg');
+
+  @media (min-width: $md) {
+    background-image: url('../images/main-block/main-block-bg.jpg');
+  }
 
   @media (min-width: $lg) {
     padding-bottom: rem(140);
@@ -14,15 +19,8 @@
 
   &::after {
     position: absolute;
-    background-color: rgba(0, 0, 0, 80%);
+    background-color: rgba(0, 0, 0, 70%);
     content: '';
-    inset: 0;
-  }
-
-  &__bg {
-    position: absolute;
-    height: 100%;
-    object-fit: cover;
     inset: 0;
   }
 

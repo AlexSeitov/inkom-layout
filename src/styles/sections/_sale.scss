@@ -1,7 +1,10 @@
 .sale {
   position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url('../images/sale/sale-bg-sm.jpg');
+
+  @media (min-width: $md) {
+    background-image: url('../images/sale/sale-bg.jpg');
+  }
 
   .container {
     position: relative;
