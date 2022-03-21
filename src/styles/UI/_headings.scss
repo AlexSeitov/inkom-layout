@@ -9,13 +9,15 @@
 .h1 {
   margin-bottom: rem(50);
   font-size: rem(24);
+  line-height: lh(30, 24);
 
   @media (min-width: $md) {
     font-size: rem(36);
   }
 
   @media (min-width: $lg) {
-    margin-bottom: rem(82);
+    margin-bottom: rem(50);
+    font-size: rem(46);
   }
 }
 

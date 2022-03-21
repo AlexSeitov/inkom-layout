@@ -18,6 +18,10 @@
 
     @media (min-width: $md) {
       flex-wrap: nowrap;
+
+      &:nth-child(3) {
+        flex-direction: row-reverse;
+      }
     }
   }
 
