@@ -1,20 +1,17 @@
-// footer
-
 .footer {
-  padding: rem(50) 0;
+  padding: rem(30) 0;
 
   // .footer__row
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(30);
+    gap: rem(30) rem(50);
     justify-content: space-between;
-  }
 
-  // .footer__address
-
-  &__address {
+    @media (min-width: $md) {
+      justify-content: initial;
+    }
   }
 
   // .footer__phone
@@ -22,20 +19,16 @@
   &__phone {
     display: flex;
     align-items: center;
-    margin-left: rem(54);
-
-    @media (min-width: $sm) {
-      margin-left: 0;
-    }
   }
-}
-
-.container {
 }
 
 .address-footer {
   display: flex;
   align-items: center;
+
+  @media (min-width: $md) {
+    margin-left: auto;
+  }
 
   // .address-footer__text
 
@@ -44,9 +37,6 @@
     flex-direction: column;
     margin-left: rem(14);
   }
-}
-
-.phone {
 }
 
 .location {

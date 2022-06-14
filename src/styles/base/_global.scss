@@ -22,14 +22,6 @@ a {
   text-decoration: none;
 }
 
-.link {
-  @media (hover: hover) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 li {
   list-style: none;
 }
@@ -44,6 +36,14 @@ img {
 svg {
   display: block;
   width: 100%;
+}
+
+.logo {
+  max-width: rem(120);
+
+  @media (min-width: $sm) {
+    max-width: rem(160);
+  }
 }
 
 .container {
@@ -71,19 +71,6 @@ svg {
     content: '';
   }
 }
-
-// .social-icon {
-//   display: inline-block;
-//   width: rem(38);
-//   height: rem(38);
-//   transition: transform $transition;
-
-//   @media (hover: hover) {
-//     &:hover {
-//       transform: scale(1.2);
-//     }
-//   }
-// }
 
 .location-icon {
   width: rem(40);

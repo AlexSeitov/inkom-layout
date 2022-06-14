@@ -24,23 +24,11 @@
     color: $white;
   }
 
-  // .questions__title
-
-  &__title {
-  }
-
   // .questions__text
 
   &__text {
     max-width: rem(715);
     margin-bottom: rem(44);
-  }
-}
-
-.question {
-  // .question__form
-
-  &__form {
   }
 }
 
@@ -71,10 +59,5 @@
       color: $placeHolderColor;
       font-size: rem(15);
     }
-  }
-
-  // .form__btn
-
-  &__btn {
   }
 }
