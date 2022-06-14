@@ -1,21 +1,27 @@
 .main-block {
-  position: relative;
-  padding-top: rem(100);
-  padding-bottom: rem(80);
-  background-image: url('../images/main-block/main-block-bg-sm.jpg');
+  padding-top: rem(68);
 
   @media (min-width: $sm) {
-    padding-top: rem(140);
-  }
-
-  @media (min-width: $md) {
-    // padding-top: rem(140);
-    background-image: url('../images/main-block/main-block-bg.jpg');
+    padding-top: rem(84);
   }
 
   @media (min-width: $lg) {
-    padding-top: rem(195);
-    padding-bottom: rem(140);
+    padding-top: rem(155);
+  }
+
+  &__wrapper {
+    padding-top: rem(70);
+    padding-bottom: rem(100);
+    background-image: url('../images/main-block/main-block-bg-sm.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media (min-width: $md) {
+      padding-top: rem(70);
+      padding-bottom: rem(140);
+      background-image: url('../images/main-block/main-block-bg.jpg');
+    }
   }
 
   .container {
@@ -26,20 +32,14 @@
   // .main-block__title-column
 
   &__title-column {
-    padding: rem(40) rem(40) rem(60) rem(40);
+    max-width: rem(380);
+    padding: rem(40) rem(20);
     background-color: $glassColor;
     border-radius: $radius;
     backdrop-filter: blur(3px);
 
-    @media (min-width: $sm) {
-      max-width: rem(380);
-    }
-
     @media (min-width: $md) {
       max-width: rem(500);
-    }
-
-    @media (min-width: $lg) {
       padding: rem(40) rem(40) rem(60) rem(40);
     }
   }
@@ -48,15 +48,5 @@
 
   &__title {
     color: $black;
-  }
-
-  // .main-block__btn
-
-  &__btn {
-  }
-
-  // .main-block__info
-
-  &__info {
   }
 }

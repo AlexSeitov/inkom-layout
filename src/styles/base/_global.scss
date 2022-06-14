@@ -22,14 +22,6 @@ a {
   text-decoration: none;
 }
 
-.link {
-  @media (hover: hover) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-
 li {
   list-style: none;
 }

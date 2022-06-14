@@ -4,8 +4,7 @@
   width: 100%;
   padding-top: rem(10);
   padding-bottom: rem(10);
-  background-color: $glassColor;
-  backdrop-filter: blur(6px);
+  background-color: $white;
 
   @media (min-width: $lg) {
     padding-bottom: 0;
@@ -74,14 +73,9 @@
   &__btn {
     display: none;
 
-    // outline-color: $primaryColorLight;
-
     @media (min-width: $md) {
       display: block;
       padding: rem(15) rem(25);
     }
-  }
-
-  &__nav {
   }
 }
