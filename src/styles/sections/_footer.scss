@@ -1,15 +1,18 @@
+@use "../base/functions";
+@use "../base/variables";
+
 .footer {
-  padding: rem(30) 0;
+  padding: functions.rem(30) 0;
 
   // .footer__row
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(30) rem(50);
+    gap: functions.rem(30) functions.rem(50);
     justify-content: space-between;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       justify-content: initial;
     }
   }
@@ -26,7 +29,7 @@
   display: flex;
   align-items: center;
 
-  @media (min-width: $md) {
+  @media (min-width: variables.$md) {
     margin-left: auto;
   }
 
@@ -35,11 +38,11 @@
   &__text {
     display: flex;
     flex-direction: column;
-    margin-left: rem(14);
+    margin-left: functions.rem(14);
   }
 }
 
 .location {
-  width: rem(40);
-  height: rem(40);
+  width: functions.rem(40);
+  height: functions.rem(40);
 }

@@ -1,41 +1,44 @@
+@use "../base/functions";
+@use "../base/variables";
+
 .btn {
   display: inline-block;
-  padding: rem(16) rem(20);
+  padding: functions.rem(16) functions.rem(20);
   font-weight: 700;
-  font-size: rem(14);
-  font-family: $secondaryFontFamily;
-  line-height: lh(18.4);
+  font-size: functions.rem(14);
+  font-family: variables.$secondaryFontFamily;
+  line-height: functions.lh(18.4);
   text-align: center;
   text-decoration: none;
   border: none;
-  border-radius: $btnRadius;
-  transition: all $transition;
+  border-radius: variables.$btnRadius;
+  transition: all variables.$transition;
 
-  @media (min-width: $xl) {
-    padding: rem(18) rem(40);
-    font-size: rem(16);
+  @media (min-width: variables.$xl) {
+    padding: functions.rem(18) functions.rem(40);
+    font-size: functions.rem(16);
   }
 
   @media (hover: hover) {
     cursor: pointer;
 
     &:hover {
-      color: $white;
-      background-color: $btnColorHover;
-      outline-color: $btnColorHover;
+      color: variables.$white;
+      background-color: variables.$btnColorHover;
+      outline-color: variables.$btnColorHover;
     }
   }
 
   &-primary {
-    color: $white;
-    background-color: $primaryColor;
+    color: variables.$white;
+    background-color: variables.$primaryColor;
   }
 
   &-secondary {
-    color: $primaryColor;
-    font-size: rem(14);
+    color: variables.$primaryColor;
+    font-size: functions.rem(14);
     background-color: transparent;
-    border-radius: $btnRadius;
-    outline: rem(2) solid $primaryColor;
+    border-radius: variables.$btnRadius;
+    outline: functions.rem(2) solid variables.$primaryColor;
   }
 }

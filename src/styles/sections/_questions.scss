@@ -1,8 +1,11 @@
+@use "../base/functions";
+@use "../base/variables";
+
 .questions {
   position: relative;
   background-image: url('../images/questions/questions-bg-sm.jpg');
 
-  @media (min-width: $md) {
+  @media (min-width: variables.$md) {
     background-image: url('../images/questions/questions-bg.jpg');
   }
 
@@ -13,7 +16,7 @@
 
   &::before {
     position: absolute;
-    background-color: $overlayColor;
+    background-color: variables.$overlayColor;
     content: '';
     inset: 0;
   }
@@ -21,23 +24,23 @@
   // .questions__column
 
   &__column {
-    color: $white;
+    color: variables.$white;
   }
 
   // .questions__text
 
   &__text {
-    max-width: rem(715);
-    margin-bottom: rem(44);
+    max-width: functions.rem(715);
+    margin-bottom: functions.rem(44);
   }
 }
 
 .form {
   display: flex;
   flex-wrap: wrap;
-  gap: rem(30);
+  gap: functions.rem(30);
 
-  @media (min-width: $sm) {
+  @media (min-width: variables.$sm) {
     flex-wrap: nowrap;
   }
 
@@ -45,19 +48,19 @@
 
   &__input-phone {
     width: 100%;
-    max-width: rem(553);
-    padding: rem(16) rem(20);
-    font-size: rem(16);
+    max-width: functions.rem(553);
+    padding: functions.rem(16) functions.rem(20);
+    font-size: functions.rem(16);
     border: none;
-    border-radius: $btnRadius;
+    border-radius: variables.$btnRadius;
 
-    @media (min-width: $md) {
-      padding: rem(24) rem(40);
+    @media (min-width: variables.$md) {
+      padding: functions.rem(24) functions.rem(40);
     }
 
     &::placeholder {
-      color: $placeHolderColor;
-      font-size: rem(15);
+      color: variables.$placeHolderColor;
+      font-size: functions.rem(15);
     }
   }
 }

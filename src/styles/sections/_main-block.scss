@@ -1,25 +1,28 @@
-.main-block {
-  padding-top: rem(68);
+@use '../base/functions';
+@use '../base/variables';
 
-  @media (min-width: $sm) {
-    padding-top: rem(84);
+.main-block {
+  padding-top: functions.rem(68);
+
+  @media (min-width: variables.$sm) {
+    padding-top: functions.rem(84);
   }
 
-  @media (min-width: $lg) {
-    padding-top: rem(155);
+  @media (min-width: variables.$lg) {
+    padding-top: functions.rem(155);
   }
 
   &__wrapper {
-    padding-top: rem(70);
-    padding-bottom: rem(100);
+    padding-top: functions.rem(70);
+    padding-bottom: functions.rem(100);
     background-image: url('../images/main-block/main-block-bg-sm.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    @media (min-width: $md) {
-      padding-top: rem(70);
-      padding-bottom: rem(140);
+    @media (min-width: variables.$md) {
+      padding-top: functions.rem(70);
+      padding-bottom: functions.rem(140);
       background-image: url('../images/main-block/main-block-bg.jpg');
     }
   }
@@ -32,21 +35,22 @@
   // .main-block__title-column
 
   &__title-column {
-    max-width: rem(380);
-    padding: rem(40) rem(20);
-    background-color: $glassColor;
-    border-radius: $radius;
+    max-width: functions.rem(380);
+    padding: functions.rem(40) functions.rem(20);
+    background-color: variables.$glassColor;
+    border-radius: variables.$radius;
     backdrop-filter: blur(3px);
 
-    @media (min-width: $md) {
-      max-width: rem(500);
-      padding: rem(40) rem(40) rem(60) rem(40);
+    @media (min-width: variables.$md) {
+      max-width: functions.rem(500);
+      padding: functions.rem(40) functions.rem(40) functions.rem(60)
+        functions.rem(40);
     }
   }
 
   // .main-block__title
 
   &__title {
-    color: $black;
+    color: variables.$black;
   }
 }

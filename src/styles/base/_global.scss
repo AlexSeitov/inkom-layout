@@ -1,3 +1,6 @@
+@use "functions";
+@use "variables";
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,14 +9,14 @@
 
 body {
   overflow-x: hidden;
-  color: $black;
-  font-weight: $fontWeight;
-  font-size: rem(16);
-  font-family: $fontFamily;
-  line-height: $lineHeight;
+  color: variables.$black;
+  font-weight: variables.$fontWeight;
+  font-size: functions.rem(16);
+  font-family: variables.$fontFamily;
+  line-height: variables.$lineHeight;
 
-  @media (min-width: $xl) {
-    font-size: $fontSize;
+  @media (min-width: variables.$xl) {
+    font-size: variables.$fontSize;
   }
 }
 
@@ -39,21 +42,21 @@ svg {
 }
 
 .logo {
-  max-width: rem(120);
+  max-width: functions.rem(120);
 
-  @media (min-width: $sm) {
-    max-width: rem(160);
+  @media (min-width: variables.$sm) {
+    max-width: functions.rem(160);
   }
 }
 
 .container {
-  max-width: rem($containerWidth);
+  max-width: functions.rem(variables.$containerWidth);
   margin-inline: auto;
-  padding-inline: rem(15);
+  padding-inline: functions.rem(15);
 }
 
 .section {
-  padding: rem(80) 0;
+  padding: functions.rem(80) 0;
 }
 
 .disable-scroll {
@@ -73,8 +76,8 @@ svg {
 }
 
 .location-icon {
-  width: rem(40);
-  height: rem(40);
+  width: functions.rem(40);
+  height: functions.rem(40);
 }
 
 .bg-img {

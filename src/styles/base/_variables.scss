@@ -1,7 +1,9 @@
+@use 'functions';
+
 // Fonts, text
 $fontFamily: 'Museo Sans Cyrl', sans-serif;
 $secondaryFontFamily: 'Robotto', sans-serif;
-$fontSize: rem(18);
+$fontSize: functions.rem(18);
 $fontWeight: 500;
 $lineHeight: 1.4;
 
@@ -16,8 +18,8 @@ $overlayColor: rgba(#312002, 70%);
 $placeHolderColor: #787878;
 
 // Others
-$radius: rem(10);
-$btnRadius: rem(4);
+$radius: functions.rem(10);
+$btnRadius: functions.rem(4);
 $shadow: 0 0 60px rgba(255, 194, 86, 50%);
 $transition: 0.3s;
 
@@ -31,10 +33,10 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Breakpoints
-$sm: rem(568);
-$md: rem(768);
-$lg: rem(1024);
-$xl: rem($maxWidthContainer);
+$sm: functions.rem(568);
+$md: functions.rem(768);
+$lg: functions.rem(1024);
+$xl: functions.rem($maxWidthContainer);
 
 // Columns
 // $col-1: calc(100% / 12 * 1);

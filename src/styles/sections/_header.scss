@@ -1,12 +1,15 @@
+@use "../base/functions";
+@use "../base/variables";
+
 .header {
   position: absolute;
   z-index: 2;
   width: 100%;
-  padding-top: rem(10);
-  padding-bottom: rem(10);
-  background-color: $white;
+  padding-top: functions.rem(10);
+  padding-bottom: functions.rem(10);
+  background-color: variables.$white;
 
-  @media (min-width: $lg) {
+  @media (min-width: variables.$lg) {
     padding-bottom: 0;
   }
 
@@ -14,17 +17,17 @@
 
   &__row {
     display: flex;
-    gap: rem(30);
+    gap: functions.rem(30);
     align-items: center;
     width: 100%;
-    color: $black;
+    color: variables.$black;
 
-    @media (min-width: $lg) {
-      padding-bottom: rem(15);
-      border-bottom: 1px solid $primaryColor;
+    @media (min-width: variables.$lg) {
+      padding-bottom: functions.rem(15);
+      border-bottom: 1px solid variables.$primaryColor;
     }
 
-    @media (min-width: $xl) {
+    @media (min-width: variables.$xl) {
       justify-content: space-between;
     }
   }
@@ -35,7 +38,7 @@
     z-index: 11;
     margin-right: auto;
 
-    @media (min-width: $xl) {
+    @media (min-width: variables.$xl) {
       margin-right: 0;
     }
   }
@@ -45,9 +48,9 @@
   &__quote {
     display: none;
 
-    @media (min-width: $xl) {
+    @media (min-width: variables.$xl) {
       display: block;
-      max-width: rem(286);
+      max-width: functions.rem(286);
     }
   }
 
@@ -56,17 +59,17 @@
   &__phone {
     display: none;
 
-    @media (min-width: $sm) {
+    @media (min-width: variables.$sm) {
       display: block;
-      margin-right: rem(30);
+      margin-right: functions.rem(30);
       font-weight: 700;
     }
 
     @media (hover: hover) {
-      transition: color $transition;
+      transition: color variables.$transition;
 
       &:hover {
-        color: $primaryColor;
+        color: variables.$primaryColor;
         text-decoration: underline;
       }
     }
@@ -77,9 +80,9 @@
   &__btn {
     display: none;
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       display: block;
-      padding: rem(15) rem(25);
+      padding: functions.rem(15) functions.rem(25);
     }
   }
 }

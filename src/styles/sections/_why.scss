@@ -1,3 +1,6 @@
+@use '../base/functions';
+@use '../base/variables';
+
 .why {
   // .why__title
 
@@ -10,13 +13,13 @@
   &__item {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(30);
+    gap: functions.rem(30);
 
     &:not(:first-child) {
-      margin-top: rem(60);
+      margin-top: functions.rem(60);
     }
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       flex-wrap: nowrap;
 
       &:nth-child(3) {
@@ -34,7 +37,7 @@
       order: 1;
     }
 
-    @media (min-width: $md) {
+    @media (min-width: variables.$md) {
       flex-basis: 50%;
 
       &:nth-child(1) {
@@ -52,7 +55,7 @@
   // .why__item-list
 
   &__item-list {
-    margin-bottom: rem(42);
+    margin-bottom: functions.rem(42);
   }
 }
 
@@ -62,14 +65,14 @@
   &__item {
     display: flex;
     align-items: center;
-    margin-bottom: rem(30);
+    margin-bottom: functions.rem(30);
   }
 
   // .list-why__icon
 
   &__icon {
-    width: rem(16);
-    height: rem(16);
-    margin-right: rem(28);
+    width: functions.rem(16);
+    height: functions.rem(16);
+    margin-right: functions.rem(28);
   }
 }

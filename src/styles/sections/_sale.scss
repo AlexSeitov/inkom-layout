@@ -1,8 +1,11 @@
+@use "../base/functions";
+@use "../base/variables";
+
 .sale {
   position: relative;
   background-image: url('../images/sale/sale-bg-sm.jpg');
 
-  @media (min-width: $md) {
+  @media (min-width: variables.$md) {
     background-image: url('../images/sale/sale-bg.jpg');
   }
 
@@ -13,7 +16,7 @@
 
   &::before {
     position: absolute;
-    background-color: $overlayColor;
+    background-color: variables.$overlayColor;
     content: '';
     inset: 0;
   }
@@ -21,9 +24,9 @@
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: rem(50);
+    gap: functions.rem(50);
 
-    @media (min-width: $lg) {
+    @media (min-width: variables.$lg) {
       flex-wrap: nowrap;
       justify-content: space-between;
     }
@@ -31,38 +34,38 @@
 }
 
 .description-sale {
-  color: $white;
+  color: variables.$white;
 
-  @media (min-width: $sm) {
-    max-width: rem(638);
+  @media (min-width: variables.$sm) {
+    max-width: functions.rem(638);
   }
 
-  @media (min-width: $lg) {
-    flex-basis: rem(638);
+  @media (min-width: variables.$lg) {
+    flex-basis: functions.rem(638);
   }
 }
 
 .info-sale {
-  padding: rem(28) rem(15);
-  background-color: $white;
-  border-radius: $radius;
+  padding: functions.rem(28) functions.rem(15);
+  background-color: variables.$white;
+  border-radius: variables.$radius;
 
-  @media (min-width: $sm) {
-    max-width: rem(447);
-    padding: rem(36);
+  @media (min-width: variables.$sm) {
+    max-width: functions.rem(447);
+    padding: functions.rem(36);
   }
 
-  @media (min-width: $lg) {
-    flex-basis: rem(447);
+  @media (min-width: variables.$lg) {
+    flex-basis: functions.rem(447);
   }
 
   &__text {
-    margin-bottom: rem(36);
+    margin-bottom: functions.rem(36);
   }
 }
 
 .list-sale {
-  margin-bottom: rem(54);
+  margin-bottom: functions.rem(54);
 
   // .list-sale__item
 
@@ -70,13 +73,13 @@
     display: flex;
 
     &:not(:last-child) {
-      margin-bottom: rem(24);
+      margin-bottom: functions.rem(24);
     }
   }
 
   &__icon {
-    width: rem(16);
-    height: rem(16);
-    margin-right: rem(14);
+    width: functions.rem(16);
+    height: functions.rem(16);
+    margin-right: functions.rem(14);
   }
 }
