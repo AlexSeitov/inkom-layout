@@ -43,7 +43,8 @@
 
     @media (min-width: variables.$md) {
       max-width: functions.rem(500);
-      padding: functions.rem(40) functions.rem(40) functions.rem(60)
+      padding:
+        functions.rem(40) functions.rem(40) functions.rem(60)
         functions.rem(40);
     }
   }

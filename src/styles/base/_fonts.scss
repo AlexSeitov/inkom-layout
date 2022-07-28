@@ -1,5 +1,4 @@
-@use "../mixins/font-face";
-
+@use '../mixins/font-face';
 @include font-face.font-face(
   'Museo Sans Cyrl',
   '../fonts/MuseoSansCyrl-500',
