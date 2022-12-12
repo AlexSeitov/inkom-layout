@@ -36,10 +36,6 @@ export default {
       {
         test: /\.(jpg|jpeg|gif)$/i,
         type: 'asset/resource'
-      },
-      {
-        test: /\.woff2$/,
-        type: 'asset/resource'
       }
     ]
   },

@@ -1,5 +1,9 @@
-@use 'functions';
-@use 'variables';
+@use 'functions' as *;
+@use 'variables' as *;
+
+// @include font-face.font-face('Roboto', '../fonts/Roboto-Regular', 400, normal);
+// @include font-face.font-face('Roboto', '../fonts/Roboto-Bold', 700, normal);
+// @include font-face.font-face('Roboto', '../fonts/Roboto-Black', 900, normal);
 
 * {
   box-sizing: border-box;
@@ -9,14 +13,14 @@
 
 body {
   overflow-x: hidden;
-  color: variables.$black;
-  font-weight: variables.$fontWeight;
-  font-size: functions.rem(16);
-  font-family: variables.$fontFamily;
-  line-height: variables.$lineHeight;
+  color: $black;
+  font-weight: $fontWeight;
+  font-size: rem(16);
+  font-family: $fontFamily;
+  line-height: $lineHeight;
 
-  @media (min-width: variables.$xl) {
-    font-size: variables.$fontSize;
+  @media (min-width: $xl) {
+    font-size: $fontSize;
   }
 }
 
@@ -42,21 +46,21 @@ svg {
 }
 
 .logo {
-  max-width: functions.rem(120);
+  max-width: rem(120);
 
-  @media (min-width: variables.$sm) {
-    max-width: functions.rem(160);
+  @media (min-width: $sm) {
+    max-width: rem(160);
   }
 }
 
 .container {
-  max-width: functions.rem(variables.$containerWidth);
-  margin-inline: auto;
-  padding-inline: functions.rem(15);
+  max-width: rem($containerWidth);
+  margin: 0 auto;
+  padding: 0 rem(15);
 }
 
 .section {
-  padding: functions.rem(80) 0;
+  padding: rem(80) 0;
 }
 
 .disable-scroll {
@@ -76,8 +80,8 @@ svg {
 }
 
 .location-icon {
-  width: functions.rem(40);
-  height: functions.rem(40);
+  width: rem(40);
+  height: rem(40);
 }
 
 .bg-img {

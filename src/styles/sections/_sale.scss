@@ -1,11 +1,11 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .sale {
   position: relative;
   background-image: url('../images/sale/sale-bg-sm.jpg');
 
-  @media (min-width: variables.$md) {
+  @media (min-width: $md) {
     background-image: url('../images/sale/sale-bg.jpg');
   }
 
@@ -16,56 +16,57 @@
 
   &::before {
     position: absolute;
-    background-color: variables.$overlayColor;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $overlayColor;
     content: '';
-    inset: 0;
   }
 
   &__row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: functions.rem(50);
+    display: grid;
+    gap: rem(50);
 
-    @media (min-width: variables.$lg) {
-      flex-wrap: nowrap;
-      justify-content: space-between;
+    @media (min-width: $lg) {
+      grid-template-columns: 7fr 5fr;
     }
   }
 }
 
 .description-sale {
-  color: variables.$white;
+  color: $white;
 
-  @media (min-width: variables.$sm) {
-    max-width: functions.rem(638);
+  @media (min-width: $sm) {
+    max-width: rem(638);
   }
 
-  @media (min-width: variables.$lg) {
-    flex-basis: functions.rem(638);
+  @media (min-width: $lg) {
+    flex-basis: rem(638);
   }
 }
 
 .info-sale {
-  padding: functions.rem(28) functions.rem(15);
-  background-color: variables.$white;
-  border-radius: variables.$radius;
+  padding: rem(28) rem(15);
+  background-color: $white;
+  border-radius: $radius;
 
-  @media (min-width: variables.$sm) {
-    max-width: functions.rem(447);
-    padding: functions.rem(36);
+  @media (min-width: $sm) {
+    max-width: rem(447);
+    padding: rem(36);
   }
 
-  @media (min-width: variables.$lg) {
-    flex-basis: functions.rem(447);
+  @media (min-width: $lg) {
+    flex-basis: rem(447);
   }
 
   &__text {
-    margin-bottom: functions.rem(36);
+    margin-bottom: rem(36);
   }
 }
 
 .list-sale {
-  margin-bottom: functions.rem(54);
+  margin-bottom: rem(54);
 
   // .list-sale__item
 
@@ -73,13 +74,23 @@
     display: flex;
 
     &:not(:last-child) {
-      margin-bottom: functions.rem(24);
+      margin-bottom: rem(24);
     }
   }
 
   &__icon {
-    width: functions.rem(16);
-    height: functions.rem(16);
-    margin-right: functions.rem(14);
+    width: rem(16);
+    height: rem(16);
+    margin-right: rem(14);
+  }
+}
+
+@supports (gap: 1px) {
+  .sale {
+    background-image: url('../images/sale/sale-bg-sm.webp');
+
+    @media (min-width: $md) {
+      background-image: url('../images/sale/sale-bg.webp');
+    }
   }
 }

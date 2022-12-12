@@ -1,20 +1,27 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .footer {
-  padding: functions.rem(30) 0;
+  padding: rem(10) 0;
 
   // .footer__row
 
   &__row {
     display: flex;
     flex-wrap: wrap;
-    gap: functions.rem(30) functions.rem(50);
+    align-items: center;
     justify-content: space-between;
+    margin: 0 rem(-15);
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       justify-content: initial;
     }
+  }
+
+  // .footer__item
+
+  &__item {
+    padding: rem(20) rem(15);
   }
 
   // .footer__phone
@@ -29,7 +36,7 @@
   display: flex;
   align-items: center;
 
-  @media (min-width: variables.$md) {
+  @media (min-width: $md) {
     margin-left: auto;
   }
 
@@ -38,11 +45,11 @@
   &__text {
     display: flex;
     flex-direction: column;
-    margin-left: functions.rem(14);
+    margin-left: rem(14);
   }
 }
 
 .location {
-  width: functions.rem(40);
-  height: functions.rem(40);
+  width: rem(40);
+  height: rem(40);
 }

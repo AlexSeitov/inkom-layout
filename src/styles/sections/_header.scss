@@ -1,15 +1,15 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .header {
   position: absolute;
   z-index: 2;
   width: 100%;
-  padding-top: functions.rem(10);
-  padding-bottom: functions.rem(10);
-  background-color: variables.$white;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  background-color: $white;
 
-  @media (min-width: variables.$lg) {
+  @media (min-width: $lg) {
     padding-bottom: 0;
   }
 
@@ -17,17 +17,15 @@
 
   &__row {
     display: flex;
-    gap: functions.rem(30);
+    flex-wrap: wrap;
     align-items: center;
-    width: 100%;
-    color: variables.$black;
+    color: $black;
 
-    @media (min-width: variables.$lg) {
-      padding-bottom: functions.rem(15);
-      border-bottom: 1px solid variables.$primaryColor;
+    @media (min-width: $lg) {
+      border-bottom: 1px solid $primaryColor;
     }
 
-    @media (min-width: variables.$xl) {
+    @media (min-width: $xl) {
       justify-content: space-between;
     }
   }
@@ -38,7 +36,11 @@
     z-index: 11;
     margin-right: auto;
 
-    @media (min-width: variables.$xl) {
+    @media (min-width: $md) {
+      padding-bottom: rem(15);
+    }
+
+    @media (min-width: $xl) {
       margin-right: 0;
     }
   }
@@ -48,9 +50,9 @@
   &__quote {
     display: none;
 
-    @media (min-width: variables.$xl) {
+    @media (min-width: $xl) {
       display: block;
-      max-width: functions.rem(286);
+      max-width: rem(286);
     }
   }
 
@@ -59,17 +61,17 @@
   &__phone {
     display: none;
 
-    @media (min-width: variables.$sm) {
+    @media (min-width: $sm) {
       display: block;
-      margin-right: functions.rem(30);
+      margin-right: rem(30);
       font-weight: 700;
     }
 
     @media (hover: hover) {
-      transition: color variables.$transition;
+      transition: color $transition;
 
       &:hover {
-        color: variables.$primaryColor;
+        color: $primaryColor;
         text-decoration: underline;
       }
     }
@@ -80,9 +82,14 @@
   &__btn {
     display: none;
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       display: block;
-      padding: functions.rem(15) functions.rem(25);
+      margin-right: rem(20);
+      padding: rem(15) rem(25);
+    }
+
+    @media (min-width: $lg) {
+      margin-right: 0;
     }
   }
 }

@@ -1,5 +1,5 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .catalog {
   .container {
@@ -16,54 +16,54 @@
 
   &__btns {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(functions.rem(160), 1fr));
-    gap: functions.rem(20);
-    margin-bottom: functions.rem(30);
+    grid-template-columns: repeat(auto-fit, minmax(rem(160), 1fr));
+    gap: rem(20);
+    margin-bottom: rem(30);
 
-    @media (min-width: variables.$sm) {
-      grid-template-columns: repeat(auto-fit, minmax(functions.rem(228), 1fr));
+    @media (min-width: $sm) {
+      grid-template-columns: repeat(auto-fit, minmax(rem(228), 1fr));
     }
 
-    @media (min-width: variables.$lg) {
-      margin-bottom: functions.rem(60);
+    @media (min-width: $lg) {
+      margin-bottom: rem(60);
     }
   }
 
   // .catalog__btn
 
   &__btn {
-    @media (max-width: functions.rem(567.98)) {
+    @media (max-width: rem(567.98)) {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: functions.rem(10);
+      padding: rem(10);
     }
   }
 
   // .catalog__slider-img
 
   &__slider-img {
-    margin-bottom: functions.rem(30);
+    margin-bottom: rem(30);
   }
 
   // .catalog__slider-text
 
   &__slider-text {
-    margin-bottom: functions.rem(48);
+    margin-bottom: rem(48);
     font-weight: 700;
-    font-size: functions.rem(18);
+    font-size: rem(18);
 
     span {
       display: block;
-      margin-bottom: functions.rem(10);
-      color: variables.$primaryColor;
+      margin-bottom: rem(10);
+      color: $primaryColor;
       font-weight: 900;
-      font-size: functions.rem(20);
+      font-size: rem(20);
     }
 
-    @media (min-width: variables.$md) {
+    @media (min-width: $md) {
       span {
-        font-size: functions.rem(30);
+        font-size: rem(30);
       }
     }
   }
@@ -72,32 +72,32 @@
 .list-catalog {
   display: flex;
   flex-wrap: wrap;
-  gap: functions.rem(20);
   justify-content: center;
 
-  @media (min-width: variables.$sm) {
+  @media (min-width: $sm) {
     justify-content: space-between;
   }
 
   // .list-catalog__item
 
   &__item {
-    color: variables.$gray;
+    padding: rem(20) rem(20) 0;
+    color: $gray;
     font-weight: 500;
-    font-size: functions.rem(18);
+    font-size: rem(18);
 
     span {
       display: block;
-      color: variables.$primaryColor;
+      color: $primaryColor;
       font-weight: 700;
-      font-size: functions.rem(20);
+      font-size: rem(20);
     }
 
-    @media (min-width: variables.$md) {
-      font-size: functions.rem(24);
+    @media (min-width: $md) {
+      font-size: rem(24);
 
       span {
-        font-size: functions.rem(30);
+        font-size: rem(30);
       }
     }
   }

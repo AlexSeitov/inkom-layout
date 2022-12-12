@@ -1,13 +1,13 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .burger {
-  width: functions.rem(30);
-  height: functions.rem(26);
-  border-radius: functions.rem(5);
+  width: rem(30);
+  height: rem(26);
+  border-radius: rem(5);
   outline: none;
 
-  @media (min-width: variables.$lg) {
+  @media (min-width: $lg) {
     display: none;
   }
 }
@@ -29,11 +29,12 @@
 .burger__btn span {
   position: absolute;
   display: block;
-  width: functions.rem(30);
-  height: functions.rem(2);
-  background-color: variables.$black;
+  width: rem(30);
+  height: rem(2);
+  background-color: $black;
   transform: rotate(0deg);
-  transition: all variables.$transition;
+  transition-duration: $transition;
+  transition-property: transform, width;
 }
 
 .burger__btn span:nth-child(1) {
@@ -41,15 +42,15 @@
 }
 
 .burger__btn span:nth-child(2) {
-  top: functions.rem(8);
+  top: rem(8);
 }
 
 .burger__btn span:nth-child(3) {
-  top: functions.rem(8);
+  top: rem(8);
 }
 
 .burger__btn span:nth-child(4) {
-  top: functions.rem(16);
+  top: rem(16);
 }
 
 .burger_active span:nth-child(1) {

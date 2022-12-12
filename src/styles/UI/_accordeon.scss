@@ -8,7 +8,7 @@
     align-items: center;
     width: 92%;
     cursor: pointer;
-    transition: all $transition ease-out;
+    transition: transform $transition ease-out;
 
     &::after {
       position: absolute;

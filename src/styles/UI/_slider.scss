@@ -1,13 +1,13 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .swiper-catalog {
   position: relative;
   margin: 0 auto;
   overflow-x: hidden;
 
-  @media (min-width: variables.$xl) {
-    width: calc(100% - functions.rem(120));
+  @media (min-width: $xl) {
+    width: calc(100% - rem(120));
   }
 }
 
@@ -25,29 +25,29 @@
 .swiper-btns {
   display: none;
 
-  @media (min-width: variables.$xl) {
+  @media (min-width: $xl) {
     position: absolute;
     top: 45%;
     z-index: 2;
     display: flex;
     justify-content: space-between;
-    width: calc(100% - functions.rem(60));
+    width: calc(100% - rem(60));
     opacity: 0.3;
   }
 }
 
 .swiper-button-next,
 .swiper-button-prev {
-  width: functions.rem(16);
-  height: functions.rem(16);
+  width: rem(16);
+  height: rem(16);
   cursor: pointer;
 
   &::after {
     display: inline-block;
-    padding: functions.rem(16);
-    border: solid variables.$primaryColor;
-    border-width: 0 functions.rem(10) functions.rem(10) 0;
-    transition: transform variables.$transition;
+    padding: rem(16);
+    border: solid $primaryColor;
+    border-width: 0 rem(10) rem(10) 0;
+    transition: transform $transition;
     content: '';
   }
 }
@@ -77,5 +77,5 @@
 }
 
 .swiper-catalog-btns {
-  padding: functions.rem(2);
+  padding: rem(2);
 }

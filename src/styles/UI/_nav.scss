@@ -1,29 +1,34 @@
-@use '../base/functions';
-@use '../base/variables';
+@use '../base/functions' as *;
+@use '../base/variables' as *;
 
 .nav {
   display: none;
 
-  @media (min-width: variables.$lg) {
+  @media (min-width: $lg) {
     position: relative;
     display: block;
 
     &__list {
       display: flex;
-      column-gap: functions.rem(60);
+      overflow-x: scroll;
+    }
+
+    &__item {
+      margin-right: rem(60);
     }
   }
 
   &__link {
     display: inline-block;
-    padding: functions.rem(20) 0;
-    font-size: functions.rem(18);
-    line-height: functions.lh(25, 18);
-    transition: color variables.$transition;
+    padding: rem(20) 0;
+    font-size: rem(18);
+    line-height: lh(25, 18);
+    white-space: nowrap;
+    transition: color $transition;
 
     @media (hover: hover) {
       &:hover {
-        color: variables.$primaryColor;
+        color: $primaryColor;
         text-decoration: underline;
       }
     }
@@ -31,9 +36,9 @@
 
   &__phone {
     display: inline-block;
-    padding: functions.rem(20) 0;
+    padding: rem(20) 0;
 
-    @media (min-width: variables.$lg) {
+    @media (min-width: $lg) {
       display: none;
     }
   }
@@ -46,11 +51,11 @@
   display: block;
   width: 100%;
   height: 100vh;
-  padding-top: functions.rem(70);
-  padding-left: functions.rem(15);
+  padding-top: rem(70);
+  padding-left: rem(15);
   background-color: #fff;
 
-  @media (min-width: variables.$sm) {
-    padding-top: functions.rem(90);
+  @media (min-width: $sm) {
+    padding-top: rem(90);
   }
 }
